@@ -1,0 +1,48 @@
+.AppCard{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: max-content;
+    padding: 0.25rem 0.65rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.AppCard .right{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem;
+}
+
+.AppCard .right .texts{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AppCard .right .usagee{
+    width: 100%;
+    background-color: white;
+    height: 0.85rem;
+    margin-top: 0.5rem;
+    border-radius: 15px;
+}
+
+.AppCard .right .usagee .child{
+    background-color: rgb(73, 73, 209);
+    width: 75%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.AppCard img{
+    width: 3.5rem;
+}

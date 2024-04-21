@@ -1,0 +1,18 @@
+.Apps{
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    background-color: #1F1F1F;
+    margin-left: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.Apps h1{
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+}

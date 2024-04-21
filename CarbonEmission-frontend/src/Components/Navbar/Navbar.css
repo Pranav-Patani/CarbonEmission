@@ -1,0 +1,79 @@
+.Navbar{
+    width: 16rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #0F0F0F;
+    position: fixed;
+}
+
+.Navbar .logo{
+    width: 100%;
+}
+
+.Navbar .logo img{
+    width: 100%;
+    height: auto;
+}
+
+.Navbar .content{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Navbar button{
+    width: 95%;
+    height: 3rem;
+    padding: 1rem;
+    background-color: #1F1F1F;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Navbar button:hover{
+    background-color: #4B8E4B;
+}
+
+.Navbar button p{
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.Navbar button img{
+    width: 1.5rem;
+}
+
+.Navbar .userBox{
+    width: 98%;
+    height: 3rem;
+    background-color: #1F1F1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Navbar .userBox p{
+    margin: 0;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.Navbar .userBox img{
+    width: 2rem;
+    margin-left: 0.5rem;
+}

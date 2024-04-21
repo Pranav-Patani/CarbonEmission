@@ -1,0 +1,32 @@
+.Homepage{
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    background-color: #1F1F1F;
+    display: flex;
+}
+
+.Homepage .contents{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 16rem;
+}
+
+.Homepage .contents .InfoCards{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Homepage .contents p.heading{
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+}
