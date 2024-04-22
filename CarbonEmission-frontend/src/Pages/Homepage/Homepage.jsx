@@ -5,7 +5,7 @@ import { useContext } from "react";
 import AppDataContext from "../../contexts/AppData";
 
 const Homepage = () => {
-  const { total_carbon_emission, last_restart_time } =
+  const { total_carbon_emission, last_restart_time, charging_status } =
     useContext(AppDataContext);
 
   return (
@@ -23,12 +23,27 @@ const Homepage = () => {
           />
           <InfoCard
             title="Unused Startup Apps"
-            detail="6"
+            detail={total_carbon_emission ? `6` : `calculating...`}
             cmdButton="Reconfigure"
           />
-          <InfoCard title="Charger On For" detail="12 Hrs" />
-          <InfoCard title="Accessories On" detail="3 Hrs" />
-          <InfoCard title="Laptop Idle Time" detail="10 Hrs" />
+          <InfoCard
+            title="Charging Status"
+            detail={
+              charging_status === undefined
+                ? `calculating...`
+                : charging_status
+                ? `charging`
+                : `not charging`
+            }
+          />
+          <InfoCard
+            title="Accessories On"
+            detail={total_carbon_emission ? `3 Hrs` : `calculating...`}
+          />
+          <InfoCard
+            title="Laptop Idle Time"
+            detail={total_carbon_emission ? `10 Hrs` : `calculating...`}
+          />
           <InfoCard
             title="Last Restart"
             detail={

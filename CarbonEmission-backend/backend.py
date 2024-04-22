@@ -6,6 +6,7 @@ def get_top_apps_data():
     power_usage = get_running_apps_power_usage()
     usage_time = get_running_apps_usage_time()
     last_restart_time = get_last_restart_time()
+    charging_status = get_charging_status()
 
     apps_carbon_emission = []
     total_carbon_emission = 0  # Initialize total carbon emission
@@ -34,7 +35,7 @@ def get_top_apps_data():
         app_data['percentage'] = round((app_data['carbon_emission'] / total_carbon_emission) * 100, 2)
 
     sorted_apps = sorted(apps_carbon_emission, key=lambda x: x['carbon_emission'], reverse=True)
-    appData = {'total_carbon_emission': round(total_carbon_emission, 3), 'data': sorted_apps, 'last_restart_time': last_restart_time}
+    appData = {'total_carbon_emission': round(total_carbon_emission, 3), 'data': sorted_apps, 'last_restart_time': last_restart_time, 'charging_status': charging_status}
     return appData;
 
 def calculate_carbon_emission(power_consumption, usage_time, cif):
@@ -60,3 +61,10 @@ def get_last_restart_time():
     boot_time = psutil.boot_time()
     last_restart_time = (time.time() - boot_time) / 3600  # Convert seconds to hours
     return round(last_restart_time, 1)
+
+def get_charging_status():
+    battery = psutil.sensors_battery()
+    if battery is not None:
+        return battery.power_plugged
+    return "Unknown"
+
